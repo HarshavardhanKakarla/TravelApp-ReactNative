@@ -32,7 +32,7 @@ const DestinationCard = ({ item, navigation }) => {
         >
             <Image
                 source={item.image}
-                style={{ width: wp(44), height: wp(65), borderRadius: 35 }}
+                style={{ width: wp(44), height: wp(65), borderRadius: 25 }}
                 className="absolute"
             />
 
@@ -51,7 +51,7 @@ const DestinationCard = ({ item, navigation }) => {
 
             <TouchableOpacity
                 onPress={()=> setFavorite(!isFavorite)}
-                className="absolute top-1 p-3 right-3 rounded-full"
+                className="absolute top-1 p-3 right-3 rounded-full border border-neutral-400"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
             >
                 <HeartIcon size={wp(5)} color={isFavorite? 'red':   "white"} />

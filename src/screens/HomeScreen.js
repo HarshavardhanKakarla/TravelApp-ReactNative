@@ -16,6 +16,7 @@ import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import Categories from "../components/categories";
 import SortCategories from "../components/sortCategories";
 import Destinations from "../components/destinations";
+import Footer from "../components/footer";
 
 
 const ios = Platform.OS == "ios";
@@ -46,7 +47,7 @@ export default function HomeScreen() {
 
                 {/* searchbar */}
                 <View className="mx-5 mb-4">
-                    <View className="flex-row items-center bg-neutral-100 rounded-full p-4 space-x-2 pl-6">
+                    <View className="flex-row items-center bg-neutral-100 rounded-full p-1  space-x-4 pl-6">
                         <MagnifyingGlassIcon size={20} strokeWidth={3} color='gray'/>
                         <TextInput
                         placeholder="Search destination"
@@ -69,6 +70,10 @@ export default function HomeScreen() {
                 {/* destinations */}
                 <View>
                     <Destinations/>
+                </View>
+
+                <View>
+                    <Footer/>
                 </View>
             </ScrollView>
         </SafeAreaView>

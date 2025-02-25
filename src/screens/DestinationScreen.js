@@ -32,7 +32,7 @@ export default function DestinationScreen(props) {
             <SafeAreaView className="pt-5 flex-row justify-between items-center w-full absolute">
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
-                    style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+                    style={{ backgroundColor: "rgba(0,0,0,1)" }}
                     className="p-2 ml-4 rounded-full"
                 >
                     <ChevronLeftIcon
@@ -45,7 +45,7 @@ export default function DestinationScreen(props) {
                 <TouchableOpacity
                     onPress={() => setFavorite(!isFavorite)}
                     style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
-                    className="p-2 mr-4 rounded-full"
+                    className="p-2 mr-4 rounded-full border border-neutral-400"
                 >
                     <HeartIcon
                         size={wp(7)}
@@ -75,7 +75,7 @@ export default function DestinationScreen(props) {
                             style={{ fontSize: wp(7), color: theme.text }}
                             className="font-semibold"
                         >
-                            ${item?.price}
+                            ₹{item?.price}
                         </Text>
                     </View>
 
@@ -112,7 +112,7 @@ export default function DestinationScreen(props) {
                     </View>
                 </ScrollView>
 
-                <TouchableOpacity style={{backgroundColor:theme.bg(0.8), height:wp(15), width:wp(50)}} className='mb-6 mx-auto rounded-full items-center justify-center flex'>
+                <TouchableOpacity style={{backgroundColor:theme.bg(0.8), height:wp(15), width:wp(50)}} className='mb-10 mx-auto rounded-full items-center justify-center flex'>
                     <Text style={{fontSize:wp(5.5)}} className='font-bold text-white'>Book Now</Text>
                 </TouchableOpacity>
             </View>
